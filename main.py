@@ -7,7 +7,7 @@ from typing import Optional
 
 app = FastAPI()
 # ==================
-# Data
+# Data of events 
 # ==================
 events = [
     {
@@ -41,7 +41,6 @@ events = [
         "is_open": False
     }
 ]
-
 # ============================
 # GET /  API Route
 # ============================
