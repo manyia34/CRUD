@@ -104,9 +104,9 @@ def get_is_open(is_open: bool | None = None):
         return filtered_record
     raise HTTPException(status_code=404, detail="Not found")
 
-# =========================
-# Pydantic models
-# =========================
+# =================================
+# Pydantic models of Event create
+# ================================
 class EventCreate(BaseModel):
     title: str
     category: str
@@ -116,7 +116,9 @@ class EventCreate(BaseModel):
     capacity: int
     is_open: bool
 
-
+# ===================================
+# Pydantic model of event update 
+# ===================================
 class EventUpdate(BaseModel):
     title: str
     category: str
@@ -126,7 +128,9 @@ class EventUpdate(BaseModel):
     capacity: int
     is_open: bool
 
-
+# ==================================
+# Pydantic model of event patch 
+# ==================================
 class EventPatch(BaseModel):
     title: Optional[str] = None
     category: Optional[str] = None
